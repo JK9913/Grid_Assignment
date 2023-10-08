@@ -16,7 +16,33 @@ html, body {
 .sidebar{
     background-color: rgb(0, 174, 255);
     grid-area: 1 / 1 / -1 / 1;
+    display: grid;
+    grid-template: repeat(1, minmax(5%, 0.5fr)) repeat(2, minmax(10%, 4fr)) / 1fr;
 }
+
+.dashboard {
+    grid-area: 1 / 1 / 1 / 1;
+    display: grid;
+    grid-template: 1fr / minmax(10%,1fr) minmax(30%, 3fr);
+    color: white;
+    padding: 2% 10% 2% 10%;
+    justify-content: center;
+    align-items: start;
+}
+
+
+.dashboard .squares {
+    grid-area: 1 / 1 / 1 / 1;
+    float: right;
+}
+
+
+.dashboard .title {
+    grid-area: 1 / 2 / 1 / -1;
+}
+
+
+
 
 .header {
     background-color: white;
