@@ -18,6 +18,7 @@ html, body {
     grid-area: 1 / 1 / -1 / 1;
     display: grid;
     grid-template: repeat(1, minmax(5%, 1fr)) repeat(2, minmax(10%, 4fr)) / 1fr;
+    gap: 5%;
 
 }
 
@@ -45,19 +46,40 @@ html, body {
 
 .actionlist {
     height: 100%;
+    display: grid;
+    gap: 5%;
+}
+
+.actions1 {
+    grid-area: 2 / 1 / 2 / 1;
+    justify-self: left;
+    margin: 10%;
 }
 
 .actionlist li {
     height: 16.67%;
-    padding-left: 10%;
+    padding-left: 3%;
     text-align: left;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .actionlist li::marker {
     font-size: 3rem;
+    margin-right: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actionlist span {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .actionitem1 {
@@ -78,7 +100,15 @@ html, body {
 .actionitem6{
     list-style-image: url(Images/account-group.svg);
 }
-
+.actionitem7 {
+    list-style-image: url(Images/cog.svg);
+}
+.actionitem8 {
+    list-style-image: url(Images/face-agent.svg);
+}
+.actionitem9 {
+    list-style-image: url(Images/book-lock.svg);
+}
 
 
 .header {
