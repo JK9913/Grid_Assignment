@@ -129,7 +129,25 @@ html, body {
     grid-area: 1 / 2 / 1 / -1;
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
     display: grid;
-    grid-template: repeat(2, minmax(10%, 1fr))/minmax(20%, 3fr),minmax(7%,1fr);
+    grid-template: repeat(2, minmax(10%, 1fr))/repeat(1, minmax(10%, 1fr));
+}
+
+.searchbarAndProfile {
+    grid-area: 1 / 1 / 1 / 1;
+    display: grid;
+    grid-template: 1fr / minmax(20%, 3fr) minmax(5%, 1fr);
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.titleAndButtons {
+    grid-area: 2 / 1 / 2 / 1;
+    display: grid;
+    grid-template: 1fr / minmax(20%, 3fr) minmax(5%, 1fr);
 }
 
 
