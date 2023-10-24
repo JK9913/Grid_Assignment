@@ -130,24 +130,97 @@ html, body {
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
     display: grid;
     grid-template: repeat(2, minmax(10%, 1fr))/repeat(1, minmax(10%, 1fr));
+    padding: none;
+    margin: 0;
 }
 
 .searchbarAndProfile {
     grid-area: 1 / 1 / 1 / 1;
     display: grid;
     grid-template: 1fr / minmax(20%, 3fr) minmax(5%, 1fr);
+    margin: 0;
+    padding: 0;
+    gap: 2%;
 }
 
 .searchbar {
+    display: grid;
+    grid-template: 1fr / minmax(2%,1fr) minmax(20%, 8fr);
+    gap: 1%;
+}
+
+.searchbar button {
+    grid-area: 1 / 1 / 1 / 1;
+    border-radius: 50%;
+    margin: 8%;
+    background-image: url(Images/magnify.svg);
+    border: none;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    padding: 20%;
+    background-size: 25%;
+    background-color: transparent;
+}
+
+.searchbar input {
+    border-radius: 25px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 1%;
+    background-color: rgba(163, 163, 163, 0.3);
+    border: none;
+}
+
+.profile {
+    display: grid;
+    grid-template: 1fr / minmax(5%, 1fr) minmax(5%, 1fr) minmax(20%, 2fr);
+    gap: 4%;
+}
+
+.bell {
+    grid-area: 1 / 1 / 1 / 1;
+    border: none;
+    background-image: url(Images/bell-ring.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 30%;
+}
+
+.icon {
+    grid-area: 1 / 2 / 1 / 2;
+    background-color: rgba(255, 208, 0, 0.664);
+    margin: 40% 8% 40% 8%;
+    border-radius: 50%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
+
+img {
+    width: 60%;
+    height: 60%;
+}
+
+.name {
+    color: black;
+    grid-area: 1 / 3 / 1 / 3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 
 .titleAndButtons {
     grid-area: 2 / 1 / 2 / 1;
     display: grid;
-    grid-template: 1fr / minmax(20%, 3fr) minmax(5%, 1fr);
+    grid-template: 1fr / minmax(15%, 1fr) minmax(15%, 1fr);
 }
 
 
