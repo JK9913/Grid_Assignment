@@ -190,15 +190,12 @@ html, body {
 
 .icon {
     grid-area: 1 / 2 / 1 / 2;
-    background-color: rgba(255, 208, 0, 0.664);
-    margin: 40% 8% 40% 8%;
-    border-radius: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-img {
+.icon img {
     width: 60%;
     height: 60%;
 }
@@ -221,6 +218,37 @@ img {
     grid-area: 2 / 1 / 2 / 1;
     display: grid;
     grid-template: 1fr / minmax(15%, 1fr) minmax(15%, 1fr);
+    gap: 15%;
+
+}
+
+.title {
+    grid-area: 1 / 1 / 1 / 1;
+    display: grid;
+    grid-template: 1fr / minmax(10%, 1fr) minmax(25%, 3fr);
+}
+
+.circleprofile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleprofile img {
+    width: 50%;
+    height: 50%;
+}
+
+.introname {
+    grid-area: 1 / 2 / 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    line-height: 0;
+    color: black;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
