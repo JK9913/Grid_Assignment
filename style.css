@@ -285,7 +285,8 @@ html, body {
 .cards {
     grid-area: 1 / 1 / 1 / 1;
     display: grid;
-    grid-template: minmax(2%, 1fr) minmax(20%, 15fr) / 1fr;
+    grid-template: minmax(2%, 1fr) minmax(20%, 10fr) / 1fr;
+    overflow: scroll;
 }
 
 .cardCollection {
@@ -298,7 +299,7 @@ html, body {
 
 .card {
     display: grid;
-    grid-template: minmax(20%, 3fr) minmax(5%, 1fr) / 1fr;
+    grid-template: minmax(20%, 1.7fr) minmax(5%, 1fr) / 1fr;
     background-color: white;
     border-radius: 1.3vh;
     box-shadow: -7px 0 0 0 rgba(254, 192, 6, 0.9);
@@ -318,4 +319,17 @@ h4 {
 .text p{
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.6);
+}
+
+.symbols {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.symbols img {
+    height: 30%;
+    width: 16%;
+    margin: 0;
+    padding: 0;
 }
