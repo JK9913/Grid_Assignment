@@ -277,7 +277,7 @@ html, body {
     background-color: transparent;
     grid-area: 2 / 2 / -1 / -1;
     display: grid;
-    grid-template: 1fr / minmax(10%, 3fr) minmax(5%, 1fr);
+    grid-template: 1fr / minmax(10%, 4fr) minmax(5%, 1fr);
     gap: 2%;
     padding: 2%;
     max-height: 100%;
@@ -310,11 +310,12 @@ html, body {
 
 .card {
     display: grid;
-    grid-template: minmax(20%, 1.7fr) minmax(5%, 1fr) / 1fr;
+    grid-template: minmax(20%, 1.7fr) minmax(20%, 1fr) / 1fr;
     background-color: white;
     border-radius: 1.3vh;
     box-shadow: -7px 0 0 0 rgba(254, 192, 6, 0.9);
     padding: 4%;
+    overflow: auto;
 }
 
 .cardContent {
@@ -348,10 +349,12 @@ h4 {
 
 .announcements {
     display: grid;
-    grid-template: repeat(2, minmax(0.5fr, 1fr)) / 1fr;
+    grid-template: minmax(0,1fr) minmax(1fr, 7fr) minmax(0,1fr) minmax(1fr, 7fr) / 1fr;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: bolder;
+    overflow: auto;
+    margin-bottom: 11%;
 }
 
 .notifications {
@@ -362,11 +365,19 @@ h4 {
     display: grid;
     grid-template: repeat(3, minmax(10%, 1fr)) / 1fr;
     justify-items: center;
+    border-radius: 1vh;
 }
 
 .announcement p{
     font-size: 0.85rem;
     color: rgba(0, 0, 0, 0.6);
+}
+
+
+.announcement .titleRight {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 hr {
@@ -376,19 +387,45 @@ hr {
 
 }
 
-
-
 .trendingUsers {
     display: grid;
-    grid-template: repeat(4, minmax(10%, 1fr))/ 1fr;
+    grid-template: repeat(4, minmax(20%, 1fr))/ 1fr;
+    background-color: white;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 1vh;
 }
 
 .user {
     display: grid;
     grid-template: 1fr / minmax(5%, 1fr) minmax(10%, 2fr);
+    align-items: center;
+    height: 100%;
 }
 
 .user .avatar {
-    background-image: url(Images/avatar.svg);
-    background-repeat: no-repeat;
+    padding: 20%;
+    display: flex; 
+    flex-shrink: 2;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.user .avatar img {
+    width: 80%;
+    height: 80%;
+}
+
+.user .handle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 0;
+    font-size: 1rem;
+}
+
+.user .handle p:last-of-type {
+    color: rgba(0, 0, 0, 0.6);
 }
