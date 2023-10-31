@@ -359,6 +359,9 @@ h4 {
     background-color: white;
     font-size: 1.2rem;
     font-weight: bold;
+    display: grid;
+    grid-template: repeat(3, minmax(10%, 1fr)) / 1fr;
+    justify-items: center;
 }
 
 .announcement p{
@@ -366,3 +369,26 @@ h4 {
     color: rgba(0, 0, 0, 0.6);
 }
 
+hr {
+    color: rgba(0, 0, 0, 0.7);
+    size: 1;
+    width: 100%;
+
+}
+
+
+
+.trendingUsers {
+    display: grid;
+    grid-template: repeat(4, minmax(10%, 1fr))/ 1fr;
+}
+
+.user {
+    display: grid;
+    grid-template: 1fr / minmax(5%, 1fr) minmax(10%, 2fr);
+}
+
+.user .avatar {
+    background-image: url(Images/avatar.svg);
+    background-repeat: no-repeat;
+}
